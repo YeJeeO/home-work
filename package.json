@@ -1,6 +1,6 @@
 {
-  "name": "home-work",
-  "version": "1.0.0",
+  "name": "nextjs-todo-list",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,20 +9,11 @@
     "start": "next start",
     "lint": "next lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/YeJeeO/home-work.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/YeJeeO/home-work/issues"
-  },
-  "homepage": "https://github.com/YeJeeO/home-work#readme",
   "dependencies": {
-    "foo": "^0.0.7",
-    "next": "^13.2.3",
+    "next": "^13.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }
