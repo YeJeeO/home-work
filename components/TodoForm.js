@@ -1,32 +1,28 @@
 import React, { useState } from 'react';
  
-const TodoForm = ({ addTodo }) => {
+export default function TodoForm ({ addTodo }) {
   const [text, setText] = useState('');
  
-  const handleSubmit = (e) => {
+   function inputTask(e) {
     e.preventDefault();
     if (!text) return;
     addTodo(text);
     setText('');
   };
  
-  return (
-    <form onSubmit={handleSubmit}>
+  return <>
+    <form>
       <input
           type="text"
           value={text}
           onInput={(evt) => setText(evt.target.value)}
         />
         <button
-          onClick={() => {
-            setTodos([...todos, { id: todos.length + 1, text }]);
-            setText("");
-          }}
+          onClick={inputTask}
         >
           ADD
         </button>
     </form>
-  );
-};
+</>
  
-export default TodoForm;
+}

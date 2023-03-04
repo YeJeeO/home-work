@@ -1,16 +1,18 @@
 import React from 'react';
  
-const TodoList = ({ todos }) => {
+export default function TodoList ({ todos }) {
+    function deleteTodo (id) {
+        setTodos(todos.filter((todo) => todo.id !== id));
+        };
   return (
-    <ul>
+    <ol>
       {todos.map((todo) => (
         <li key={todo.id}>
           <span>{todo.text}</span>
-          <button>Delete</button>
+          <button onClick= {deleteTodo}>
+            Delete</button>
         </li>
       ))}
-    </ul>
+    </ol>
   );
-};
- 
-export default TodoList;
+}
