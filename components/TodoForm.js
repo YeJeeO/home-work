@@ -19,7 +19,7 @@ const TodoForm = ({ addTodo }) => {
         />
         <button
           onClick={() => {
-            setToDos([...ToDos, { str: text, id: Date.now() }]);
+            setTodos([...todos, { id: todos.length + 1, text }]);
             setText("");
           }}
         >
