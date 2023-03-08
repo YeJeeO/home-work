@@ -1,18 +1,20 @@
-import React from 'react';
- 
-export default function TodoList ({ todos }) {
-    function deleteTodo (id) {
-        setTodos(todos.filter((todo) => todo.id !== id));
-        };
+import React from "react";
+import Todo from "./Todo";
+
+function TodoList({ todos, removeTodo, toggleComplete }) {
   return (
-    <ol>
-      {todos.map((todo) => (
-        <li key={todo.id}>
-          <span>{todo.text}</span>
-          <button onClick= {deleteTodo}>
-            Delete</button>
-        </li>
+    <form>
+      {todos.map(todo => (
+        <Todo
+          key={todo.id}
+          todo={todo}
+          text={todo.text}
+          removeTodo={removeTodo}
+          toggleComplete={toggleComplete}
+        />
       ))}
-    </ol>
+    </form>
   );
 }
+
+export default TodoList;

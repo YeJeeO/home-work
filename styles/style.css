@@ -62,4 +62,7 @@
   ol li {
     list-style-type: none;
   }
+  .delete{
+    margin-left: auto
+  }
   
